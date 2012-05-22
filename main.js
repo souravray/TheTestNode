@@ -5,12 +5,12 @@ http.createServer(function (req, resp) {
         for (e in req.headers) { 
                 console.log(e+": "+req.headers[e]); 
         } 
-				console.log(proxyName + "----Request header ends----\n");
+				console.log("----Request header ends----\n");
 				var proxy = http.createClient(80, proxyName)
 					, proxyRequest = proxy.request(req.method, req.url, req.headers);
 
 				proxyRequest.addListener('response', function (proxyResponse) {
-					console.log("\n----Response header starts----");
+					console.log("----Response header starts----");
 					for (e in proxyResponse.headers) { 
                 console.log(e+": "+proxyResponse.headers[e]); 
         	} 
@@ -30,4 +30,6 @@ http.createServer(function (req, resp) {
 					proxyRequest.end();
 				});
         
-}).listen(7979); 
+}).listen(7979, function(){
+  console.log("Test-Node node is running on port: 7979");
+}); 
