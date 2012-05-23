@@ -49,5 +49,5 @@ http.createServer(function (req, resp) {
 		proxyRequest.end();
 	});        
 }).listen(7979, function(){
-  console.log("Test-Node node is running on port: 7979");
+  console.log("TestNode is running on port: 7979");
 }); 
