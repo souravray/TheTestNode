@@ -1,0 +1,12 @@
+{
+    "name": "TheTestNode"
+  , "repository":
+    { "type" : "git",
+      "url" : "https://souravray@github.com/souravray/TheTestNode.git"
+    }
+  , "version": "0.0.1"
+  , "private": false
+  , "dependencies": {
+      "socket.io": ">=0.9.0"
+  }
+}

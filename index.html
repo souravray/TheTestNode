@@ -1,0 +1,24 @@
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>
+	var socket = io.connect('http://localhost:9090');
+
+	// listener, whenever the server emits 'updatelog', this updates the chat body
+	socket.on('updatelog', function (requestHeader, responseHeader) {
+		$('#logs').append('<h3>Request:</h3>');
+		for(e in requestHeader){
+			$('#logs').append('<b>'+ e + ':</b> ' + requestHeader[e]+'<br>');
+		}
+		$('#logs').append('<h3>Response:</h3>');
+		for(e in responseHeader){
+			$('#logs').append('<b>'+ e + ':</b> ' + responseHeader[e]+'<br>');
+		}
+		$('#logs').append('<hr>');
+	});
+
+</script>
+<div style="float:left;width:100px;border-right:1px solid black;height:300px;padding:10px;overflow:scroll-y;">
+</div>
+<div style="float:left;width:500px;height:250px;overflow:scroll-y;padding:10px;">
+	<div id="logs"></div>
+</div>
