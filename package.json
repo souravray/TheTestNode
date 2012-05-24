@@ -6,7 +6,7 @@
     }
   , "version": "0.0.1"
   , "preferGlobal": "true"
-  , "description": "A simple http proxy server, that logs request and response for debugging purpose",
+  , "description": "A simple http proxy server, that logs request and response for debugging purpose"
   , "author": "Sourav Ray <me@raysourav.com>"
   , "license": "ISC"
   , "main": "./main"
