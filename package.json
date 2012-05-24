@@ -5,8 +5,18 @@
       "url" : "https://souravray@github.com/souravray/TheTestNode.git"
     }
   , "version": "0.0.1"
-  , "private": false
+  , "preferGlobal": "true"
+  , "description": "A simple http proxy server, that logs request and response for debugging purpose",
+  , "author": "Sourav Ray <me@raysourav.com>"
+  , "license": "ISC"
+  , "main": "./main"
+  , "scripts": {
+      "start": "node ./main",
+    }
   , "dependencies": {
       "socket.io": ">=0.9.0"
-  }
+    }
+  , "engine": {
+      "node": ">=0.6"
+    }
 }
